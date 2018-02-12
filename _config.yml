@@ -4,23 +4,30 @@ description: >-
   Development Team Lead at Nested. I like tech, gym and food.
 baseurl: ""
 url: "https://sadir.github.io/"
+twitter_username: sadir_
+github_username:  sadir
 
 locale: "en-gb"
 logo: "/images/sadir.png"
-
 read_time: true
+search_full_content: true
+date_format: "%d-%m-%Y"
 
 paginate: 10
 paginate_path: /page:num/
 
-search_full_content: true
-
-date_format: "%d-%m-%Y"
-
-twitter_username: sadir_
-github_username:  sadir
+jekyll-archives:
+  enabled: all
+  layout: 'archive'
+  permalinks:
+    year: '/:year/'
+    month: '/:year/:month/'
+    day: '/:year/:month/:day/'
+    tag: '/tag/:name/'
+    category: '/category/:name/'
 
 markdown: kramdown
 remote_theme: "mmistakes/so-simple-theme"
 plugins:
   - jekyll-feed
+  - jekyll-archives
