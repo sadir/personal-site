@@ -8,7 +8,7 @@ twitter_username: sadir_
 github_username:  sadir
 
 locale: "en-gb"
-logo: "/images/sadir.png"
+logo: "/images/morgan-medium.jpg"
 read_time: true
 search_full_content: true
 date_format: "%d-%m-%Y"
