@@ -4,8 +4,6 @@ description: >-
   Development Team Lead at Nested. I like tech, gym and food.
 baseurl: ""
 url: "https://sadir.github.io/"
-twitter_username: sadir_
-github_username:  sadir
 
 locale: "en-gb"
 logo: "/images/morgan-medium.jpg"
@@ -16,6 +14,9 @@ footer_links:
   - title: Twitter
     url: https://twitter.com/sadir_
     icon: fab fa-twitter-square
+  - title: LinkedIn
+    url: https://www.linkedin.com/in/morgan-sadr-hashemi/
+    icon: fab fa-linkedin
   - title: GitHub
     url: https://github.com/sadir
     icon: fab fa-github-square
