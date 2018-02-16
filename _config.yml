@@ -45,3 +45,5 @@ plugins:
   - jekyll-archives
   - jekyll-sitemap
   - jekyll-seo-tag
+  - jemoji
+  - jekyll-octicons
