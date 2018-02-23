@@ -38,6 +38,14 @@ jekyll-archives:
     tag: '/tag/:name/'
     category: '/category/:name/'
 
+jekyll-crosspost_to_medium:
+  enabled: true
+  cache: .jekyll-crosspost_to_medium
+  status: public
+  license: all-rights-reserved
+  text: '<p><i>Feedback welcome on Medium or Twitter.</i></p>'
+  backdate: true
+
 markdown: kramdown
 remote_theme: "mmistakes/so-simple-theme"
 plugins:
@@ -47,3 +55,4 @@ plugins:
   - jekyll-seo-tag
   - jemoji
   - jekyll-octicons
+  - jekyll-crosspost-to-medium
