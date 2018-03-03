@@ -47,7 +47,7 @@ They maintain the focus on the task at hand, on the goal or the failing test if 
 ### A blocker removal service :tractor:
 
 Similar to the principles of servant leadership, the navigator leads the pair by removing blockers.
-They get stuck in if the pair one, by asking stimulating open ended questions
+They get stuck in if the pair encounter one, by asking stimulating open ended questions
 like what do we know? Or what can we test to find out more? They collect information
 if more is needed or will be soon.
 
