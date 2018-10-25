@@ -9,7 +9,8 @@ crosspost_to_medium: true
 
 In this post, I'll explore pair programming, the roles, the tradeoffs, and how Github's coauthors compliment the pairing workflow.
 
-{% include toc %}
+* TOC
+{:toc}
 
 ## What is Pair Programming?
 
