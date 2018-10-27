@@ -2,7 +2,7 @@ author: Morgan Sadr-Hashemi
 title: Morgan's blog
 description: >-
   Engineering Manager at Nested. I like tech, gym and food.
-baseurl: ""
+baseurl: "/personal-site"
 url: "https://sadir.github.io"
 author:
   twitter: sadir_
