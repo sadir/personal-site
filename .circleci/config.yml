@@ -1,0 +1,62 @@
+workflows:
+  version: 2
+  default:
+    jobs:
+      - build
+      - deploy:
+          requires:
+            - build
+
+jobs:
+  build:
+    docker:
+       - image: circleci/ruby:2.5.3-node-browsers
+    working_directory: ~/repo
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+          - dependencies-{{ checksum "Gemfile.lock" }}
+          - dependencies-
+
+      - run:
+          name: install dependencies
+          command: |
+            bundle install --jobs=4 --retry=3 --path vendor/bundle
+
+      - save_cache:
+          paths:
+            - ./vendor/bundle
+          key: dependencies-{{ checksum "Gemfile.lock" }}
+        
+      - run:
+          name: build site
+          command: |
+            bundle exec jekyll build
+
+      - save_cache:
+          paths:
+            - ./_site
+          key: site-{{ .Environment.CIRCLE_SHA1 }}
+
+  deploy:
+    docker:
+       - image: circleci/ruby:2.5.3-node-browsers
+    working_directory: ~/repo
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+          - site-{{ .Environment.CIRCLE_SHA1 }}
+
+      - run:
+          name: deploy via github pages
+          command: |
+            git checkout -B gh-pages
+            git config credential.helper 'cache --timeout=120'
+            git config user.email $GITHUB_EMAIL
+            git config user.name $GITHUB_USERNAME
+            git add -f _site/
+            git commit -m "Build site to deploy to github pages"
+            # Push quietly to prevent showing the token in log
+            git push -fq https://${GITHUB_TOKEN}@github.com/sadir/sadir.github.io.git gh-pages
