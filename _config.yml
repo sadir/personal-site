@@ -69,6 +69,7 @@ plugins:
   - jekyll-archives
   - jekyll-crosspost-to-medium
   - jekyll-feed
+  - jekyll-octicons
   - jekyll-gist
   - jekyll-paginate
   - jekyll-seo-tag
