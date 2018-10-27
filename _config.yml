@@ -1,42 +1,59 @@
+author: Morgan Sadr-Hashemi
 title: Morgan's blog
-email: morgan.sadr@gmail.com
 description: >-
-  Development Team Lead at Nested. I like tech, gym and food.
+  Engineering Manager at Nested. I like tech, gym and food.
 baseurl: ""
-url: "https://sadir.github.io/"
-
-locale: "en-gb"
-logo: "/images/morgan-medium.jpg"
-read_time: true
-search_full_content: true
-date_format: "%d-%m-%Y"
-footer_links:
-  - title: Twitter
-    url: https://twitter.com/sadir_
-    icon: fab fa-twitter-square
-  - title: LinkedIn
-    url: https://www.linkedin.com/in/morgan-sadr-hashemi/
-    icon: fab fa-linkedin
-  - title: GitHub
-    url: https://github.com/sadir
-    icon: fab fa-github-square
-  - title: Feed
-    url: feed.xml
-    icon: fas fa-rss-square
-copyright: "Hand crafted and totally not just Github pages."
-
-paginate: 10
-paginate_path: /page:num/
+url: "https://sadir.github.io"
+author:
+  twitter: sadir_
+  picture: /images/morgan-medium.jpg
 
 jekyll-archives:
-  enabled: all
-  layout: 'archive'
+  enabled: "all"
+  layouts:
+    category: archive
+    day: day-archive
+    month: month-archive
+    tag: archive
+    year: year-archive
   permalinks:
-    year: '/:year/'
-    month: '/:year/:month/'
-    day: '/:year/:month/:day/'
-    tag: '/tag/:name/'
-    category: '/category/:name/'
+    category: '/archives/category/:name/'
+    year: '/archives/year/:year/'
+    month: '/archives/year/:year/month/:month/'
+    day: '/archives/year/:year/month/:month/day/:day/'
+    tag: '/archives/tag/:name/'
+
+logo: "/images/morgan-medium.jpg"
+menu:
+  - href: "/about"
+    text: About
+  - href: "/cv"
+    text: CV
+  - href: "/posts"
+    text: Posts
+  - href: "/archives"
+    text: Archives
+  - href: "https://github.com/sadir/jekyll-sadir"
+    text: Get this theme
+
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      layout: default
+
+paginate: 2
+paginate_path: "/posts/:num/"
+
+permalink: /:year/:month/:day/:title:output_ext
+
+twitter_url: https://twitter.com/sadir_
+linkedin_url: https://www.linkedin.com/in/morgan-sadr-hashemi/
+github_url: https://github.com/sadir
+rss_feed: true
+
+markdown: kramdown
 
 jekyll-crosspost_to_medium:
   enabled: true
@@ -46,13 +63,14 @@ jekyll-crosspost_to_medium:
   text: '<p><i>Feedback welcome on Medium or Twitter.</i></p>'
   backdate: true
 
-markdown: kramdown
-remote_theme: "mmistakes/so-simple-theme"
+remote_theme: "sadir/jekyll-sadir"
+
 plugins:
-  - jekyll-feed
   - jekyll-archives
-  - jekyll-sitemap
-  - jekyll-seo-tag
-  - jemoji
-  - jekyll-octicons
   - jekyll-crosspost-to-medium
+  - jekyll-feed
+  - jekyll-gist
+  - jekyll-paginate
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jemoji
