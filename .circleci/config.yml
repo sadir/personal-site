@@ -2,10 +2,18 @@ workflows:
   version: 2
   default:
     jobs:
-      - build
+      - build:
+          filters:
+              branches:
+                only:
+                  - master
       - deploy:
           requires:
             - build
+          filters:
+              branches:
+                only:
+                  - master
 
 jobs:
   build:
@@ -59,4 +67,4 @@ jobs:
             git add -f _site/
             git commit -m "Build site to deploy to github pages"
             # Push quietly to prevent showing the token in log
-            git push -fq https://${GITHUB_TOKEN}@github.com/sadir/sadir.github.io.git gh-pages
+            git push -fq https://${GITHUB_TOKEN}@github.com/sadir/personal-site.git gh-pages
