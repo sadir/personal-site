@@ -60,11 +60,12 @@ jobs:
       - run:
           name: deploy via github pages
           command: |
-            git checkout -B gh-pages
+            cd _site
+            git init .
             git config credential.helper 'cache --timeout=120'
             git config user.email $GITHUB_EMAIL
             git config user.name $GITHUB_USERNAME
-            git add -f _site/
+            git add .
             git commit -m "Build site to deploy to github pages"
             # Push quietly to prevent showing the token in log
-            git push -fq https://${GITHUB_TOKEN}@github.com/sadir/personal-site.git gh-pages
+            git push -fq https://${GITHUB_TOKEN}@github.com/sadir/sadir.github.io.git master
