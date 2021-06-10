@@ -4,7 +4,6 @@ title:  "Helping your team take charge of their career"
 date:   2019-02-12 13:02:44 +0000
 categories: growth careers frameworks process learning
 author: morgan
-crosspost_to_medium: true
 ---
 
 Building a team culture where your team drive their own learning and development is difficult, but not impossible.

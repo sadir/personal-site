@@ -55,19 +55,10 @@ rss_feed: true
 
 markdown: kramdown
 
-jekyll-crosspost_to_medium:
-  enabled: true
-  cache: .jekyll-crosspost_to_medium
-  status: public
-  license: all-rights-reserved
-  text: '<p><i>Feedback welcome on Medium or Twitter.</i></p>'
-  backdate: true
-
 remote_theme: "sadir/jekyll-sadir"
 
 plugins:
   - jekyll-archives
-  - jekyll-crosspost-to-medium
   - jekyll-feed
   - jekyll-octicons
   - jekyll-gist
