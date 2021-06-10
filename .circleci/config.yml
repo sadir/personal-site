@@ -40,7 +40,7 @@ jobs:
       - run:
           name: build site
           command: |
-            bundle exec jekyll build
+            JEKYLL_ENV=production bundle exec jekyll build
 
       - save_cache:
           paths:
