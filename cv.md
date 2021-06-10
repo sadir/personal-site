@@ -4,4 +4,4 @@ title: cv
 permalink: /cv/
 ---
 
-I have done many things.
+I'll get to this someday.
