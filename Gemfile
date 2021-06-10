@@ -5,3 +5,7 @@ group :jekyll_plugins do
   gem 'jekyll-archives'
   gem 'jekyll-octicons'
 end
+
+group :development do
+  gem "webrick"
+end
